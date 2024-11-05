@@ -1,6 +1,5 @@
 import { Table } from "@radix-ui/themes";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+import { Skeleton } from "@/app/components";
 import IssueActions from "./IssueActions";
 
 const LoadingIssuesPage = () => {
@@ -8,38 +7,38 @@ const LoadingIssuesPage = () => {
 
   return (
     <div>
-        <IssueActions/>
-        <Table.Root variant="surface">
+      <IssueActions />
+      <Table.Root variant="surface">
         <Table.Header>
-            <Table.Row>
+          <Table.Row>
             <Table.ColumnHeaderCell>Issue</Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell className="hidden md:table-cell">
-                Status
+              Status
             </Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell className="hidden md:table-cell">
-                Created
+              Created
             </Table.ColumnHeaderCell>
-            </Table.Row>
+          </Table.Row>
         </Table.Header>
         <Table.Body>
-            {issues.map((issue) => (
+          {issues.map((issue) => (
             <Table.Row key={issue}>
-                <Table.Cell>
+              <Table.Cell>
                 <Skeleton />
                 <div className="block md:hidden">
-                    <Skeleton />
+                  <Skeleton />
                 </div>
-                </Table.Cell>
-                <Table.Cell className="hidden md:table-cell">
+              </Table.Cell>
+              <Table.Cell className="hidden md:table-cell">
                 <Skeleton />
-                </Table.Cell>
-                <Table.Cell className="hidden md:table-cell">
+              </Table.Cell>
+              <Table.Cell className="hidden md:table-cell">
                 <Skeleton />
-                </Table.Cell>
+              </Table.Cell>
             </Table.Row>
-            ))}
+          ))}
         </Table.Body>
-        </Table.Root>
+      </Table.Root>
     </div>
   );
 };
