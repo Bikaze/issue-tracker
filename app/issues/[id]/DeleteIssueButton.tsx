@@ -1,4 +1,5 @@
 import { AlertDialog, Button, Flex } from "@radix-ui/themes";
+import DeleteDialogButton from "./DeleteDialogButton";
 
 const DeleteIssueButton = ({ issueId }: { issueId: number }) => {
   return (
@@ -19,9 +20,7 @@ const DeleteIssueButton = ({ issueId }: { issueId: number }) => {
             </Button>
           </AlertDialog.Cancel>
           <AlertDialog.Action>
-            <Button variant="solid" color="red">
-              Revoke access
-            </Button>
+            <DeleteDialogButton issueId={issueId}/>
           </AlertDialog.Action>
         </Flex>
       </AlertDialog.Content>
