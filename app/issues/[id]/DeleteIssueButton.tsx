@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { AlertDialog, Button, Flex } from "@radix-ui/themes";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -26,9 +26,9 @@ const DeleteIssueButton = ({ issueId }: { issueId: number }) => {
 
   return (
     <AlertDialog.Root>
-      <AlertDialog.Trigger>
-        <Button disabled={isDeleting}>
-          {isDeleting ? 'Deleting...' : 'Delete Issue'}
+      <AlertDialog.Trigger className="cursor-pointer">
+        <Button disabled={isDeleting} color="red">
+          {isDeleting ? "Deleting..." : "Delete Issue"}
         </Button>
       </AlertDialog.Trigger>
       <AlertDialog.Content>
