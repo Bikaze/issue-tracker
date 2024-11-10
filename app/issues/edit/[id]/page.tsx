@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import EditIssuePageWrapper from "./EditIssuePageWrapper";
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 const EditIssuePage = async ({ params }: Props) => {
