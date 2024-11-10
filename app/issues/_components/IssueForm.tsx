@@ -34,6 +34,7 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
       router.push("/issues/list");
       router.refresh();
     } catch (error) {
+      console.log(error);
       setSubmitting(false);
       setError("An unexpected error occurred.");
     }

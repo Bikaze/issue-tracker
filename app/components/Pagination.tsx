@@ -1,15 +1,13 @@
 "use client";
 
 import {
-  ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
+  DoubleArrowRightIcon
 } from "@radix-ui/react-icons";
 import { Button, Flex, Text } from "@radix-ui/themes";
-import { useSearchParams, useRouter } from "next/navigation";
-import React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface Props {
   itemCount: number;
