@@ -16,15 +16,16 @@ const IssueChart = ({ open, inProgress, closed }: Props) => {
     { label: "In-progress Issues", value: inProgress },
     { label: "Closed Issues", value: closed },
   ];
+
   return (
     <Card>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" aspect={1.5}>
         <BarChart data={data}>
           <XAxis dataKey="label" />
           <YAxis />
           <Bar
             dataKey="value"
-            barSize={60}
+            barSize={30}
             style={{ fill: "var(--accent-9)" }}
           />
         </BarChart>
